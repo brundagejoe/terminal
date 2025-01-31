@@ -3,8 +3,8 @@ import { useState } from "react";
 import Input from "~/components/BaseComponents/Input";
 
 export default function NcKPage() {
-  const [n, setN] = useState(0);
-  const [k, setK] = useState(0);
+  const [n, setN] = useState<number>();
+  const [k, setK] = useState<number>();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -48,16 +48,32 @@ export default function NcKPage() {
           Submit
         </button>
       </form>
-      {n > 0 && k > 0 && (
+      {n !== undefined && k !== undefined && (
         <div>
           <ul className="text-bb-foreground list-disc">
-            <li>NcK = {math.combinations(n, k)}</li>
-            <li>NpK = {math.permutations(n, k)}</li>
+            <li>NcK = {getCombination(n, k)}</li>
+            <li>NpK = {getPermutation(n, k)}</li>
           </ul>
         </div>
       )}
     </div>
   );
 }
+
+const getCombination = (n: number, k: number) => {
+  try {
+    return math.combinations(n, k);
+  } catch {
+    return "INVALID INPUT";
+  }
+};
+
+const getPermutation = (n: number, k: number) => {
+  try {
+    return math.permutations(n, k);
+  } catch {
+    return "INVALID INPUT";
+  }
+};
 
 const math = create(all);
