@@ -5,7 +5,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "bb-foreground": "#eea439",
+        "bb-foreground": "#EEA439",
+        "bb-cursor": "#61BAF9",
+        "bb-gray": "#676767",
       },
       fontFamily: {
         sans: [
