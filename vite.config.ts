@@ -9,8 +9,10 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  base: "/terminal/",
   plugins: [
     remix({
+      basename: "/terminal/",
       ssr: false,
       future: {
         v3_fetcherPersist: true,
