@@ -4,8 +4,12 @@ export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "bb-foreground": "#eea439",
+      },
       fontFamily: {
         sans: [
+          "Andale Mono",
           "Inter",
           "ui-sans-serif",
           "system-ui",

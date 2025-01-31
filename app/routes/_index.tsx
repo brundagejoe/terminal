@@ -11,8 +11,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      Test
-      <Link to="/about">About</Link>
+      <Link to="/test-page">This is a test link</Link>
     </div>
   );
 }
