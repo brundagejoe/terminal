@@ -10,7 +10,7 @@ export default function GlobalSearch() {
   );
 }
 
-const availablePages = ["", "nck"];
+const availablePages = ["", "nck", "hash"];
 
 const SearchBar = () => {
   const inputRef = useRef<HTMLInputElement>(null);
